@@ -11,10 +11,9 @@
   position: relative;
   width: 0;
   height: 0;
-  position: relative;
   border-top: 50px solid red;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
   margin-bottom: 50px;
 }
 
@@ -25,6 +24,9 @@
   border-radius: 50%;
   background-color: red;
   display: block;
+  top: -86px;
+  position: absolute;
+  left: -47px;
 }
 
 .heart::after {
@@ -34,10 +36,52 @@
   border-radius: 50%;
   background-color: red;
   display: block;
+  top: -86px;
+  position: absolute;
+  left: -3px;
 }
 
 .star {
   margin-bottom: 50px;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 50px solid red;
+  border-left: 85px solid transparent;
+  border-right: 67px solid transparent;
+  margin-bottom: 50px;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.star::before {
+  content: "";
+  position: absolute;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 50px solid red;
+  border-left: 85px solid transparent;
+  border-right: 67px solid transparent;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  display: block;
+  top: -48px;
+  left: -74px;
+}
+
+.star::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 93px solid red;
+  border-left: 44px solid transparent;
+  border-right: 10px solid transparent;
+  top: -39px;
+  left: -7px;
+  -webkit-transform: rotate(-26deg);
+  transform: rotate(-28deg);
 }
 
 .diamond {
@@ -47,6 +91,7 @@
   border-bottom: 50px solid red;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
+  margin-bottom: 50px;
 }
 
 .diamond::after {
@@ -58,5 +103,13 @@
   height: 0;
   border: 50px solid transparent;
   border-top-color: red;
+}
+
+.egg {
+  display: block;
+  width: 95px;
+  height: 115px;
+  background-color: red;
+  border-radius: 55% 55% 55% 50% / 70% 70% 40% 40%;
 }
 /*# sourceMappingURL=style.css.map */

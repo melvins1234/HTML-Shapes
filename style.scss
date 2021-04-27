@@ -11,33 +11,69 @@
     position: relative;
     width: 0;
     height: 0;
-    position: relative;
     border-top: 50px solid red;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
     margin-bottom: 50px;
 
-    &::before{
+    @mixin circleHeart{
         content: "";
         width: 50px;
         height: 50px;
         border-radius: 50%;
         background-color: red;
         display: block;
+        top: -86px;
+        position: absolute;
+    }
+
+    &::before{
+        @include circleHeart();
+        left: -47px;
+
     }
     &::after{
-        content: "";
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: red;
-        display: block;
-
+        @include circleHeart();
+        left: -3px;
     }
 
 }
+@mixin triangleStar{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 50px solid red;
+    border-left: 85px solid transparent;
+    border-right: 67px solid transparent;
+}
 .star{
     margin-bottom: 50px;
+    @include triangleStar();
+    margin-bottom: 50px;
+    transform: rotate(-70deg);
+
+    &::before{
+        content: "";
+        position: absolute;
+        @include triangleStar();
+        transform: rotate(-70deg);
+        display: block;
+        top: -48px;
+        left: -74px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 93px solid red;
+        border-left: 44px solid transparent;
+        border-right: 10px solid transparent;
+        top: -39px;
+        left: -7px;
+        -webkit-transform: rotate(-26deg);
+        transform: rotate(-28deg);
+    }
 
 }
 .diamond{
@@ -47,6 +83,7 @@
     border-bottom: 50px solid red;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
+    margin-bottom: 50px;
     &::after{
         content: '';
       position: absolute;
@@ -59,5 +96,9 @@
     }
 }
 .egg{
-
+    display: block;
+    width: 95px;
+    height: 115px;
+    background-color: red;
+    border-radius: 55% 55% 55% 50% / 70% 70% 40% 40%;
 }
